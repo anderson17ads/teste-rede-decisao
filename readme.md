@@ -1,15 +1,5 @@
 # Teste Rede Decisão
 
-Este é um carrinho de compra realizado para empresa Rede Decisão, o teste tem os seguintes recursos:
-
-- Lista de Produtos
-- Detalhe do Produto
-- Carrinho de Compra
-- Pedidos de Compra
-- Pedidos de Compra
-- Detalhes de Pedido
-- Cancelamento de Pedido
-
 ## Informações
 
 O banco de dados está na raiz do projeto com o nome de "teste-rede-decisao.sql".
