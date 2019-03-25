@@ -1,0 +1,50 @@
+# v2 syntax
+version: '2'
+
+# Named volumes
+volumes:
+  # MySQL Data
+  teste-rede-decisao-mysql-data:
+    driver: local
+
+  # Redis Data
+  teste-rede-decisao-redis-data:
+    driver: local
+
+services:
+  # MySQL (5.7)
+  mysql:
+    image: mysql:5.7
+    container_name: teste-rede-decisao-mysql
+    volumes:
+      - teste-rede-decisao-mysql-data:/var/lib/mysql
+    ports:
+      - "3307:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=teste-rede-decisao
+      - MYSQL_DATABASE=teste-rede-decisao
+      - MYSQL_USER=teste-rede-decisao
+      - MYSQL_PASSWORD=teste-rede-decisao
+
+  # Redis
+  cache:
+    image: redis:4.0
+    container_name: teste-rede-decisao-redis
+    command: --appendonly yes
+    volumes:
+      - teste-rede-decisao-redis-data:/data
+    ports:
+      - "6379:6379"
+
+  # PHP (with Nginx)
+  # you can change from nginx to apache, just change session 'image'
+  app:
+    image: ambientum/php:7.2-nginx
+    container_name: teste-rede-decisao-app
+    volumes:
+      - .:/var/www/app
+    ports:
+      - "8080:8080"
+    links:
+      - mysql
+      - cache

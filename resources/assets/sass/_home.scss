@@ -1,0 +1,33 @@
+.home-busca {
+	h3 {
+		color: $color-main;
+		font-size: 30px;
+	}
+
+	button {
+		background: inherit;
+		border: none;
+		color: $color-main;
+	}
+}
+
+.home-categorias {
+	margin-bottom: 20px;
+
+	.home-categorias-item {
+		text-align: center;
+		
+		a {
+			color: $color-second;
+			font-size: 24px;
+
+			p {
+				margin: 0;
+			}
+
+			img {
+				border-radius: 50%;
+			}
+		}
+	}
+}
