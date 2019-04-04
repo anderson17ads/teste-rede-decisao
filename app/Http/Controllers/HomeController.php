@@ -16,11 +16,7 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        $produtos = Produto::get()->all();
-
-        $categorias = Categoria::get()->all();
-        
-        return view('home.index', compact('produtos', 'categorias'));        
+    {   
+        return view('home.index');        
     }
 }

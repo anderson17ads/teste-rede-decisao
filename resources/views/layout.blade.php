@@ -10,7 +10,7 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}?r=<?= rand(111111, 999999) ?>" rel="stylesheet">
 
 </head>
 <body>
@@ -24,8 +24,8 @@
                 </a>
                 
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="{{ route('pedidos.index') }}">Pedidos</a></li>
-                    <li><a href="{{ route('carrinho.index') }}">Carrinho</a></li>
+                    <li><a href="">Pedidos</a></li>s
+                    <li><a href="">Carrinho</a></li>
                     
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Entrar</a></li>
@@ -71,7 +71,7 @@
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-    <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/app.js') }}?r=<?= rand(111111, 999999) ?>"></script>
     @stack('scripts')
     <script type="text/javascript">
         $( document ).ready(function(){

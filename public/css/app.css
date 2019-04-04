@@ -1,18 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);body {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   min-height: 100vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 main {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 h3 {
@@ -23,8 +16,7 @@ h3 {
 input[type],
 input[type]:focus:not([readonly]) {
   border-bottom: 1px solid #5f22a8;
-  -webkit-box-shadow: 0 1px 0 0 #5f22a8;
-          box-shadow: 0 1px 0 0 #5f22a8;
+  box-shadow: 0 1px 0 0 #5f22a8;
 }
 
 input[type]:focus:not([readonly]) + label {
@@ -79,77 +71,5 @@ nav {
 
 nav .nav-wrapper a {
   color: #ff4600;
-}
-
-.produto-detalhe-detalhe {
-  margin: 20px 0 0 0;
-}
-
-.produto-detalhe-detalhe h3 {
-  margin: 0 0 10px 0;
-}
-
-.produto-detalhe-detalhe h4 {
-  margin: 0;
-}
-
-.produto-detalhe-detalhe button {
-  margin: 20px 0;
-  background-color: #ff4600;
-}
-
-.produto-detalhe-descricao {
-  margin: 10px 0;
-}
-
-.produto-detalhe-descricao h2 {
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 20px;
-  font-size: 24px;
-}
-
-.produto-detalhe-descricao p {
-  margin: 0;
-}
-
-.carrinho table td:first-child {
-  width: 200px;
-}
-
-.carrinho table td img {
-  max-width: 200px;
-}
-
-.carrinho .carrinho-quantidade {
-  width: 100px;
-  position: relative;
-  display: table;
-  margin: 0 auto;
-}
-
-.carrinho .carrinho-quantidade input {
-  width: 100%;
-  height: 40px;
-  text-align: center;
-  border: solid 1px #b5b5b5;
-  outline: none;
-}
-
-.carrinho .carrinho-quantidade .carrinho-setas {
-  cursor: pointer;
-  position: absolute;
-  left: 10px;
-  border-left: 9px solid transparent;
-  border-right: 9px solid transparent;
-}
-
-.carrinho .carrinho-quantidade .carrinho-setas.aumentar {
-  top: 10px;
-  border-bottom: 9px solid #ff4600;
-}
-
-.carrinho .carrinho-quantidade .carrinho-setas.diminuir {
-  top: 25px;
-  border-top: 9px solid #ff4600;
 }
 
